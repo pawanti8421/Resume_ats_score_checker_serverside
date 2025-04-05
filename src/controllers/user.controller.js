@@ -94,7 +94,7 @@ const applicantResumeScore = asyncHandler( async (req, res) => {
     
     
     // Send file path to Flask API
-    const response = await axios.post("http://127.0.0.1:5001/predict", {
+    const response = await axios.post("https://resume-ats-score-checker-mlapi.onrender.com/predict", {
         file_path: resumePath
     });
     
@@ -239,7 +239,7 @@ const recruterResumeScore = asyncHandler( async (req, res) => {
 
       
 
-      const response = await axios.post("http://127.0.0.1:5001/predict", {
+      const response = await axios.post("https://resume-ats-score-checker-mlapi.onrender.com/predict", {
           file_path: resumePath
       });
 
